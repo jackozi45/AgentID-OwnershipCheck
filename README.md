@@ -58,7 +58,7 @@ For a managed identity, the corresponding Microsoft Graph app roles must be assi
 
 ## Run the assessment
 
-### Option 1 — App registration and certificate
+### Option — App registration and certificate
 
 Make sure the signing certificate, including its private key, is available in a certificate store accessible to Microsoft Graph PowerShell on the machine where you run the script.
 
@@ -71,17 +71,6 @@ Make sure the signing certificate, including its private key, is available in a 
 ```
 
 `-OutputDirectory` is optional. If omitted, the reports are written to the current working directory.
-
-
-### Option 2 — System-assigned managed identity
-
-Run from an Azure environment that provides a system-assigned managed identity with the required Microsoft Graph app-role assignments (for example, an appropriately configured Azure Automation environment).
-
-```powershell
-./Get-AgentIdentityCompliance.ps1 `
-    -ManagedIdentity `
-    -OutputDirectory './Reports'
-```
 
 ## Output
 
