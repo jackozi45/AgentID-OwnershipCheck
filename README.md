@@ -1,4 +1,4 @@
-# Microsoft Entra Agent Identity Governance Assessment
+# Microsoft Entra Agent Identity Health Check
 
 A PowerShell-based assessment I built to identify Microsoft Entra agent identities with missing owners or sponsors.
 
