@@ -6,7 +6,7 @@ The script queries Microsoft Graph, checks both assignments for each agent ident
 
 ![Sample agent identity governance dashboard](Dashboard-Preview.png)
 
-*The screenshot and [HTML preview](AgentIdentity-Dashboard-Preview.html) use sample identities, not tenant data.*
+*The screenshot and [HTML preview](AgentIdentity-Dashboard-Preview.html) use sample agent identities & User Objects, not tenant data.*
 
 ## What it checks
 
