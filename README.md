@@ -87,8 +87,6 @@ The script follows Microsoft Graph pagination. It creates both CSV files with he
 
 ## Disclaimer
 
-I provide this script **as-is**, without warranty or guarantee of fitness for a particular purpose. Use it at your own discretion and validate its output before relying on it for governance or compliance decisions.
-
-I am not responsible for changes made by third parties, or for any behavior, errors, or outcomes resulting from those modifications. Any modified version is outside the scope of my original release and responsibility.
+I provide this script **as-is**, without warranty or guarantee of any additional modifications done by a third-party for a particular purpose. Use it at your own discretion and validate its output before relying on it for governance or compliance decisions. Any modified version is outside the scope of my original release and responsibility.
 
 **Author:** Rojan Koc
