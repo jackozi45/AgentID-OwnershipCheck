@@ -52,15 +52,9 @@ Assign the following **Application permissions** to the app registration or mana
 
 **Permission caveat:** Although this script only sends `GET` requests to Microsoft Graph, Microsoft's *list agentIdentity sponsors* API currently requires `AgentIdentity.ReadWrite.All` as an **application** permission. Delegated permissions are not supported for that endpoint. Treat the execution identity as privileged and secure its credentials accordingly, hence recommending certificate-based auth. 
 
-To grant permissions for an app registration, open **Microsoft Entra admin center > Entra ID > App registrations > [your app] > API permissions > Add a permission > Microsoft Graph > Application permissions**. Add the permissions above and select **Grant admin consent**. For certificate authentication, upload the public certificate under **Certificates & secrets > Certificates**. Keep the private key secure.
-
-For a managed identity, the corresponding Microsoft Graph app roles must be assigned to its service principal by an administrator; app registration instructions do not apply directly to managed identities.
-
 ## Run the assessment
 
 ### Option — App registration and certificate
-
-Make sure the signing certificate, including its private key, is available in a certificate store accessible to Microsoft Graph PowerShell on the machine where you run the script.
 
 ```powershell
 ./Get-AgentIdentityCompliance.ps1 `
@@ -81,8 +75,6 @@ Each run produces three files in the selected output directory:
 | `AgentIdentity-Inventory.csv` | All agent identities returned by the tenant assessment, including counts, names, object IDs, and status. |
 | `AgentIdentity-Noncompliant.csv` | Agent identities missing an owner, a sponsor, or both. |
 | `AgentIdentity-Dashboard.html` | A standalone, offline HTML dashboard with assessment totals, search, filters, and individual assignment details. |
-
-The script follows Microsoft Graph pagination. It creates both CSV files with headers even if no identities or findings are returned. An API error during identity or relationship retrieval stops the assessment rather than treating an unsuccessful request as an empty assignment.
 
 
 ## Disclaimer
